@@ -22,6 +22,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.dispatch.root_access'
+    }
     compileSdkVersion 34
 
     defaultConfig {
